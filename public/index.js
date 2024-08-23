@@ -14,20 +14,26 @@ form.addEventListener('submit', async event => {
         window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
     });
 });
+function openUrlAsProxy(url){
+    window.navigator.serviceWorker.register('./sw.js', {
+        scope: __uv$config.prefix
+    }).then(() => {
+        if(isUrl(url)){
+            window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 
+        }
+        else{
+            print("Error 1! Not a url!")
+        }
+    });
+}
 function isUrl(val = '') {
     if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
     return false;
 };
 
-function loadMario() {
-    window.location.replace('g4mescreen/supermario64.html');
-}
 
-function loadFireboyWatergirl() {
-    window.location.replace('g4mescreen/fbwg.html');
-}
-function myFunction() {
+function topnavResponsive() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
