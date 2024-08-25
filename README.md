@@ -2,7 +2,7 @@
 
 Welcome to **ProxyWave**, the next-generation web proxy! 🛠️ With ProxyWave, surf the web seamlessly without interruptions. Whether you're bypassing restrictions, testing your websites, or just browsing securely, ProxyWave has got you covered.
 
-![ProxyWave Banner](https://image.com/)
+![ProxyWave Banner](https://raw.githubusercontent.com/williambattista726/proxy-wave-uv-test1/main/Screenshot_2024-08-24_11.19.38_PM-removebg-preview.png?token=GHSAT0AAAAAACWRISEYRAPPPQTJVWBJQQAWZWKUNOQ)
 
 ## 🌟 Features
 
