@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Tabbed Iframe Interface</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="This is an example project for Chemical.">
+    <title>Pr0xyWave</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/chemical.js"></script>
+    <script src="/chemical.components.js"></script>
 </head>
 <body>
-    <div class="tabs">
-        <ul id="tab-list">
-            <!-- Tabs will be dynamically inserted here -->
-        </ul>
-        <button id="add-tab">+</button>
-    </div>
-    <div class="content">
-        <div id="iframe-container">
-            <!-- Iframes will be dynamically inserted here -->
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <h1>Pr0xywave</h1>
+    <input autofocus spellcheck="true" autocomplete="on" id="search" frame="web" placeholder="Enter a URL or search" is="chemical-input">
+    <section id="controls" is="chemical-controls">
+        <button onclick="chemicalAction('back', 'web')">Back</button>
+        <button onclick="chemicalAction('forward', 'web')">Forward</button>
+        <button onclick="chemicalAction('reload', 'web')">Reload</button>
+        <button onclick="chemicalAction('close', 'web')">Close</button>
+    </section>
+    <iframe id="web" controls="controls" is="chemical-iframe"></iframe>
 </body>
 </html>
