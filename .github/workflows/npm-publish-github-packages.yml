@@ -19,23 +19,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Specify your Node.js version here
+          node-version: '20'  # Specify your Node.js version here
 
       - name: Install dependencies
         run: |
           npm install
-
-      - name: Fix vulnerabilities
-        run: |
-          npm audit fix
-
-      - name: Check for funding
-        run: |
-          npm fund
-
-      - name: Initialize git submodules
-        run: |
-          git submodule update --init
 
       - name: Start Proxywave
         run: |
