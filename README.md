@@ -1,4 +1,4 @@
-# 🌊 ProxyWave 🚀
+# ProxyWave 🚀
 
 Welcome to **ProxyWave**, the next-generation web proxy! 🛠️ With ProxyWave, surf the web seamlessly without interruptions. Whether you're bypassing restrictions, testing your websites, or just browsing securely, ProxyWave has got you covered.
 
