@@ -1,4 +1,4 @@
-name: Start
+name: Run Proxywave
 
 on:
   push:
@@ -9,23 +9,36 @@ on:
       - main
 
 jobs:
-  run-start-script:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20' 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Specify your Node.js version here
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: |
+          npm install
 
-    - name: Make start.sh executable
-      run: chmod +x ./start.sh
+      - name: Fix vulnerabilities
+        run: |
+          npm audit fix
 
-    - name: Run start.sh script
-      run: ./start.sh
+      - name: Check for funding
+        run: |
+          npm fund
+
+      - name: Initialize git submodules
+        run: |
+          git submodule update --init
+
+      - name: Start Proxywave
+        run: |
+          echo "Proxywave has started on localhost. Open chrome and in the url type https://localhost"
+          echo "Ctrl+C to end"
+          npm start
