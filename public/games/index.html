@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/style.css">
+   <script src="/index.js"></script>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <style>.game-button {
+    background-color: #00bfa6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .game-button:hover {
+    background-color: #00a897;
+  }
+  
+  #gamesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+  }
+  </style>
+   
+</head>
+<body>
+   <nav id="myTopnav">
+      <a href="/">Proxywave</a>
+      <a href="games" class="active">Games</a>
+
+      <a onclick="window.open('https://launcher.orionzleon.me')">Minecraft</a>
+
+      <a href="javascript:void(0);" class="icon" onclick="topnavResponsive()">
+        <i class="fa fa-bars"></i>
+      </a>
+   </nav>
+   <br>
+
+   <div id="gamesContainer">
+      <button class="game-button" onclick="openUrlAsProxy('https://1v1.school')">1v1.lol</button>
+      <button class="game-button" onclick="openUrlAsProxy('https://krunker.io')">Krunker.io</button>
+      <button class="game-button" onclick="openUrlAsProxy('https://shellshock.io')">Shell Shockers</button>
+      <button class="game-button" onclick="openUrlAsProxy('https://slither.io')">Slither.io</button>
+      <button class="game-button" onclick="openUrlAsProxy('https://agar.io')">Agar.io</button>
+   </div>
+
+   <script src="/uv/uv.bundle.js"></script>
+   <script src="/uv/uv.config.js"></script>
+
+</body>
+</html>

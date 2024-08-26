@@ -15,15 +15,17 @@ form.addEventListener('submit', async event => {
     });
 });
 function openUrlAsProxy(url){
-    window.navigator.serviceWorker.register('./sw.js', {
+
+    window.navigator.serviceWorker.register('/sw.js', {
         scope: __uv$config.prefix
     }).then(() => {
         if(isUrl(url)){
             window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+            console.log("Pass!")
 
         }
         else{
-            print("Error 1! Not a url!")
+            console.log("Error 1! Not a url!")
         }
     });
 }
