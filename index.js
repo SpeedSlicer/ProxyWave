@@ -2,7 +2,7 @@ import { ChemicalServer } from "chemicaljs";
 import express from "express";
 
 const chemical = new ChemicalServer();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 chemical.use(express.static("public", {
     index: "index.html",
@@ -10,5 +10,5 @@ chemical.use(express.static("public", {
 }));
 
 chemical.listen(port, () => {
-    console.log(`Chemical example styled listening on port ${port}`);
+    console.log(`Proxywave styled listening on port ${port}`);
 });
